@@ -1,64 +1,66 @@
 import { useState } from "react";
-import './Homework.css'
+import "./Homework.css";
 
-const TaskListApp = () => {
-  const [taskList, setTaskList] = useState([]);
-  const [newTaskInput, setNewTaskInput] = useState("");
-  const [searchInput, setSearchInput] = useState("");
+const TaskApp = () => {
+  const [tasks, setTasks] = useState<{ text: string; done: boolean }[]>([]);
+  const [taskInput, setTaskInput] = useState("");
+  const [search, setSearch] = useState("");
 
-  const addTaskToList = () => {
-    if (newTaskInput.trim()) {
-      setTaskList([...taskList, { text: newTaskInput, isCompleted: false }]);
-      setNewTaskInput("");
+  const addTask = () => {
+    if (taskInput.trim()) {
+      setTasks([...tasks, { text: taskInput, done: false }]);
+      setTaskInput("");
     }
   };
 
-  const toggleTaskCompletion = (taskIndex) => {
-    const updatedTaskList = [...taskList];
-    updatedTaskList[taskIndex].isCompleted = !updatedTaskList[taskIndex].isCompleted;
-    setTaskList(updatedTaskList);
+  const toggleTask = (index: any) => {
+    const updatedTasks = [...tasks];
+    updatedTasks[index].done = !updatedTasks[index].done;
+    setTasks(updatedTasks);
   };
 
-  const removeTaskFromList = (taskIndex) => {
-    setTaskList(taskList.filter((_, index) => index !== taskIndex));
+  const removeTask = (index: any) => {
+    setTasks([...tasks.slice(0, index), ...tasks.slice(index + 1)]);
   };
 
   return (
     <div className="container">
-      <h1>Тапсырмалар Тізімі</h1>
+      <h1>Тапсырмалар</h1>
       <input
         type="text"
-        value={newTaskInput}
-        placeholder="Жаңа тапсырма..."
-        onChange={(e) => setNewTaskInput(e.target.value)}
+        value={taskInput}
+        placeholder="Жаңа..."
+        onChange={(e) => setTaskInput(e.target.value)}
       />
-      <button className="add" onClick={addTaskToList}>Қосу</button>
+      <button className="add" onClick={addTask}>
+        Қосу
+      </button>
       <input
         type="text"
-        value={searchInput}
+        value={search}
         placeholder="Іздеу..."
-        onChange={(e) => setSearchInput(e.target.value)}
+        onChange={(e) => setSearch(e.target.value)}
       />
       <ul>
-        {taskList
-          .filter((task) => task.text.toLowerCase().includes(searchInput.toLowerCase()))
-          .map((task, taskIndex) => (
-            <li key={taskIndex}>
+        {tasks
+          .filter((task) =>
+            task.text.toLowerCase().includes(search.toLowerCase())
+          )
+          .map((task, index) => (
+            <li key={index}>
               <span
-                style={{
-                  textDecoration: task.isCompleted ? "line-through" : "none",
-                }}
+                style={{ textDecoration: task.done ? "line-through" : "none" }}
               >
                 {task.text}
               </span>
-              <button onClick={() => toggleTaskCompletion(taskIndex)}>✅</button>
-              <button onClick={() => removeTaskFromList(taskIndex)}>🗑️</button>
+              <button onClick={() => toggleTask(index)}>✅</button>
+              <button onClick={() => removeTask(index)}>🗑️</button>
             </li>
           ))}
       </ul>
-      <p>Барлығы: {taskList.length}</p>
+      <p>Барлығы: {tasks.length}</p>
     </div>
   );
 };
 
-export default TaskListApp;
+export default TaskApp;
