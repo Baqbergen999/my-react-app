@@ -19,7 +19,8 @@ import './index.css'
 // import App from './Classworks/12-03'
 // import Login from './Classworks/13-03'
 // import App from './Classworks/13-03'
-import App from './Aralyr-baqylau/App'
+// import App from './Aralyr-baqylau/App'
+import App from './Home works/17-03'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -40,6 +41,7 @@ createRoot(document.getElementById('root')!).render(
     {/* <TempColor/> */}
     {/* <App/> */}
     {/* <Login/> */}
+    {/* <App/> */}
     {/* <App/> */}
     <App/>
   </StrictMode>,
