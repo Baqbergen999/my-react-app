@@ -20,7 +20,9 @@ import './index.css'
 // import Login from './Classworks/13-03'
 // import App from './Classworks/13-03'
 // import App from './Aralyr-baqylau/App'
-import App from './Home works/17-03'
+// import App from './Home works/17-03'
+// import AppRouter from './Classworks/18-03'
+import App from './Home works/19-03'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -43,6 +45,8 @@ createRoot(document.getElementById('root')!).render(
     {/* <Login/> */}
     {/* <App/> */}
     {/* <App/> */}
-    <App/>
+    {/* <App/> */}
+    {/* <AppRouter/> */}
+    <App></App>
   </StrictMode>,
 )
