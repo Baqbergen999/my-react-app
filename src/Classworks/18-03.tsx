@@ -141,7 +141,7 @@ function Quiz() {
       setMessage("Жауабыңыз дұрыс!");
     } else {
       setMessage("Қате!");
-    }
+    } 
   };
 
   return (

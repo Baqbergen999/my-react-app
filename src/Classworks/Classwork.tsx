@@ -120,52 +120,52 @@
 
 
 
-import { useState } from "react";
+// import { useState } from "react";
 
-export default function ToDoList() {
-  const [tasks, setTasks] = useState([]);
-  const [text, setText] = useState("");
+// export default function ToDoList() {
+//   const [tasks, setTasks] = useState([]);
+//   const [text, setText] = useState("");
 
-  const addTask = () => {
-    if (text) {
-      setTasks([...tasks, { text, done: false }]);
-      setText("");
-    }
-  };
+//   const addTask = () => {
+//     if (text) {
+//       setTasks([...tasks, { text, done: false }]);
+//       setText("");
+//     }
+//   };
 
-  const editTask = (index: any) => {
-    const newText = prompt("Тапсырманы өзгерту:", tasks[index].text);
-    if (newText) {
-      const updatedTasks = [...tasks];
-      updatedTasks[index].text = newText;
-      setTasks(updatedTasks);
-    }
-  };
+//   const editTask = (index: any) => {
+//     const newText = prompt("Тапсырманы өзгерту:", tasks[index].text);
+//     if (newText) {
+//       const updatedTasks = [...tasks];
+//       updatedTasks[index].text = newText;
+//       setTasks(updatedTasks);
+//     }
+//   };
 
-  const Done = (index: any) => {
-    const updatedTasks = [...tasks];
-    updatedTasks[index].done = !updatedTasks[index].done;
-    setTasks(updatedTasks);
-  };
+//   const Done = (index: any) => {
+//     const updatedTasks = [...tasks];
+//     updatedTasks[index].done = !updatedTasks[index].done;
+//     setTasks(updatedTasks);
+//   };
 
-  return (
-    <div>
-      <h1>To-Do List</h1>
-      <input value={text} onChange={(e) => setText(e.target.value)} />
-      <button onClick={addTask}>Қосу</button>
-      <ul>
-        {tasks.map((task, index) => (
-          <li key={index}>
-            <span style={{ textDecoration: task.done ? "line-through" : "none" }}>
-              {task.text}
-            </span>
-            <button onClick={() => editTask(index)}>Өңдеу</button>
-            <button onClick={() => Done(index)}>
-              {task.done ? "Қалпына келтіру" : "Орындалды"}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <h1>To-Do List</h1>
+//       <input value={text} onChange={(e) => setText(e.target.value)} />
+//       <button onClick={addTask}>Қосу</button>
+//       <ul>
+//         {tasks.map((task, index) => (
+//           <li key={index}>
+//             <span style={{ textDecoration: task.done ? "line-through" : "none" }}>
+//               {task.text}
+//             </span>
+//             <button onClick={() => editTask(index)}>Өңдеу</button>
+//             <button onClick={() => Done(index)}>
+//               {task.done ? "Қалпына келтіру" : "Орындалды"}
+//             </button>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
