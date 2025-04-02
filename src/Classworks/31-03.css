@@ -1,0 +1,57 @@
+form {
+  background: rgba(65, 65, 65, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 40, 108, 0.534);
+  backdrop-filter: blur(10.9px);
+  -webkit-backdrop-filter: blur(10.9px);
+  border: 1px solid rgba(0, 31, 167, 0.301);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60vh;
+  gap: 15px;
+  margin-left: 100%;
+}
+input {
+    padding: 13px;
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    width: 45vh;
+    color: #333;
+}
+body {
+  /* background: linear-gradient(130deg, #5151ff, #1ebed0, #2fafc3, #5151ff, #64bcff, #2fafc3); */
+  height: 100vh;
+  width: 100vh;
+  background-image: url("https://r4.wallpaperflare.com/wallpaper/285/172/9/sunset-8k-forest-4k-wallpaper-f3fbc3fd7d29db258fb6527708db28e8.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+}   
+
+.input-group{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: fit-content;
+}
+
+button {
+  padding: 13px 35%;
+  font-size: 20px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(180deg, #4294ff, #002b7c);
+  color: #fff;
+  cursor: pointer;
+  transition: .3s background;
+}
+button:active {
+  background: linear-gradient(180deg, #003aa5, #4294ff);
+  transform: scale(0.99);
+}
