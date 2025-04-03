@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Lobster&family=Luckiest+Guy&family=Mountains+of+Christmas:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Staatliches&display=swap");
+
+header {
+  background-image: url('https://r4.wallpaperflare.com/wallpaper/578/626/344/movie-spider-man-into-the-spider-verse-miles-morales-spider-man-hd-wallpaper-7efc81362f79710d9c77d390593c3286.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  top: 0px;
+  z-index: 1001;  
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.content-of-header {
+  background-image: url('https://img.freepik.com/free-photo/black-kraft-paper-textured-background_53876-124549.jpg?semt=ais_hybrid');
+  background-size: cover;
+  background-color: #f9f9f9;
+  opacity: 0.85;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 50%;
+  height: 100vh;
+  border-radius: 0px;
+}
+.main-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+  margin-top: 100px;
+  animation: content-animation 1.6s;
+}
+@keyframes content-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.main-text h2 {
+  font-size: 60px;
+  color: rgb(174, 0, 255);
+  font-weight: 600;
+  text-shadow: 0px 0px 5px blueviolet;
+}
+.main-text h1 {
+  font-size: 70px;
+  transform: translateY(-100px);
+  font-weight: 900;
+  color: white;
+  text-shadow: white 0px 0px 5px;
+}
+.main-text p {
+  transform: translateY(-150px);
+  border: 3px white dashed;
+  width: fit-content;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+}
+.main-text a {
+  padding: 15px;
+  background-color: #ff00005b;
+  width: fit-content;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px rgba(255, 0, 0, 0.851) solid;
+  box-shadow: rgb(255, 63, 63) 0px 0px 10px;
+}
+.top-img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  animation: top-img-animation 1s;
+}
+
+.top-img a {
+  color: rgb(230, 184, 255);
+  text-shadow: rgb(230, 184, 255) 0px 0px 5px !important;
+}
+@keyframes top-img-animation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.top-img a {
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-top: 30px;
+  text-shadow: 0px 0px 5px black;
+}
+.devilery-card {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 250px;
+  margin-bottom: 20px;
+  background-color: #ff6b7c3c;
+  padding-left: 200px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  animation: devilery-card 1s;
+  box-shadow: 0px 0px 10px red;
+}
+@keyframes devilery-card {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.bottom-header {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  display: flex;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  gap: 20px;
+  flex-direction: column;
+  animation: bottom-header 1s;
+}
+@keyframes bottom-header {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.bottom-header img {
+  padding: 10px;
+  background-color: rgba(255, 0, 0, 0.267);
+  border-radius: 100%;
+  box-shadow: 0px 0px 15px rgb(255, 0, 0);
+}
+.icons {
+  position: absolute;
+  top: 0px;
+  right: 50%;
+  margin-right: 20px;
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+.top-header img{
+  margin-top: 10px;
+  margin-left: 10px;
+  animation: top-header-animation 1s;
+}
+@keyframes top-header-animation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.top-header-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 100px;
+  box-shadow: 0px 0px 10px rgb(221, 173, 255);
+}

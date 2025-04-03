@@ -1,0 +1,13 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.footer p {
+    color: #e3a6ff85;
+}
+h1 {
+    color: rgb(206, 154, 255);
+}
