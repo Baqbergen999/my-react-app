@@ -4,7 +4,7 @@ import './index.css'
 
 // import App from './Classworks/19-03'
 // import App from './Home works/31-03'
-import App from './Aralyq baqylau 30-1/App'
+import App from './Home works/08-04/Index'
 
 
 createRoot(document.getElementById('root')!).render(
