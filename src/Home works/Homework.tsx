@@ -25,20 +25,20 @@ const TaskApp = () => {
 
   return (
     <div className="container">
-      <h1>Тапсырмалар</h1>
+      <h1>Tasks</h1>
       <input
         type="text"
         value={taskInput}
-        placeholder="Жаңа..."
+        placeholder="New..."
         onChange={(e) => setTaskInput(e.target.value)}
       />
       <button className="add" onClick={addTask}>
-        Қосу
+        Add
       </button>
       <input
         type="text"
         value={search}
-        placeholder="Іздеу..."
+        placeholder="Search..."
         onChange={(e) => setSearch(e.target.value)}
       />
       <ul>
@@ -58,7 +58,7 @@ const TaskApp = () => {
             </li>
           ))}
       </ul>
-      <p>Барлығы: {tasks.length}</p>
+      <p>Total: {tasks.length}</p>
     </div>
   );
 };

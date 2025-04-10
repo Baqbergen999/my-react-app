@@ -1,0 +1,33 @@
+.cart {
+  box-shadow: inset 0px 0px 10px black;
+  padding: 20px;
+  border-radius: 50px;
+}
+.game-list {
+  box-shadow: inset 0px 0px 10px black;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+}
+h1 {
+    box-shadow: inset 0px 0px 10px black;
+    padding: 20px;
+    border-radius: 30px;
+}
+.app {
+    box-shadow: inset 0px 0px 10px black;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    width: 50%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.game-item {
+    box-shadow: inset 0px 0px 10px black;
+    padding: 20px;
+    border-radius: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+}
